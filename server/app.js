@@ -1,10 +1,5 @@
-const express = require("express");
-// const graphqlHTTP = require("express-graphql");
 const { ApolloServer } = require("apollo-server");
-// const app = express();
-const schema = require("./schema/schema");
 const mongoose = require("mongoose");
-const cors = require("cors");
 const path = require("path");
 const fs = require("fs");
 const filePath = path.join(__dirname, "./schema/typeDefs.gql");
@@ -25,6 +20,7 @@ mongoose
 	.catch(err => console.log("MongoDB connection error:", err));
 
 const server = new ApolloServer({
+	cors: true,
 	typeDefs,
 	resolvers
 });
