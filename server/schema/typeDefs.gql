@@ -1,0 +1,28 @@
+type ChapterContent {
+	text: String!
+	content: String!
+}
+
+type Book {
+	id: ID!
+	title: String!
+	description: String!
+	author: Author
+	imageUrl: String!
+	genres: [String!]
+	data: [ChapterContent!]
+}
+
+type Author {
+	id: ID!
+	name: String!
+	age: Int!
+	books: [Book!]
+}
+
+type Query {
+	books: [Book]
+	book: Book
+	authors: [Author]
+	author: Author
+}
