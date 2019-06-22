@@ -1,6 +1,6 @@
 const express = require("express");
 // const graphqlHTTP = require("express-graphql");
-const { ApolloServer, gql } = require("apollo-server");
+const { ApolloServer } = require("apollo-server");
 // const app = express();
 const schema = require("./schema/schema");
 const mongoose = require("mongoose");
@@ -16,13 +16,13 @@ const resolvers = require("./resolvers");
 // app.use(cors());
 
 // connect to mlab database
-mongoose.connect(
-	"mongodb://mocmeo:test123@ds241647.mlab.com:41647/meowtain-book",
-	{ useNewUrlParser: true }
-);
-mongoose.connection.once("open", () => {
-	console.log("connected to database");
-});
+mongoose
+	.connect("mongodb://mocmeo:test123@ds241647.mlab.com:41647/meowtain-book", {
+		useNewUrlParser: true,
+		useCreateIndex: true
+	})
+	.then(() => console.log(`DB connected`))
+	.catch(err => console.log("MongoDB connection error:", err));
 
 const server = new ApolloServer({
 	typeDefs,
