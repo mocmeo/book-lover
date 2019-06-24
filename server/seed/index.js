@@ -1,36 +1,33 @@
-const mongoose = require("mongoose");
+const { Book, Author } = require("../src/models");
+const authors = require("./authors.json");
+const books = require("./books.json");
 const config = require("../config");
-const path = require("path");
-const fs = require("fs");
+const mongoose = require("mongoose");
 const Promise = require("bluebird");
 
-const { Book, Author } = require("../src/models");
-const books = require("./books.json");
-const authors = require("./authors.json");
-
-// Connect to mlab database
+// Connect to database
 mongoose.connect(config.MONGO_URL, {
 	useNewUrlParser: true,
 	useCreateIndex: true
 });
 let db = mongoose.connection;
 
-// Generate new data
 db.on("open", async () => {
 	db.dropDatabase();
-
-	console.log("Generate books...");
-	await Promise.all(
+	Promise.all(
 		books.map(book => {
 			Book.create(book);
 		})
-	);
+	).then(() => {
+		console.log("Generate books...");
+	});
 
-	console.log("Generate authors...");
-	await Promise.all(
+	Promise.all(
 		authors.map(author => {
 			Author.create(author);
 		})
-	);
-	console.log("Done!!!");
+	).then(() => {
+		console.log("Generate authors...");
+		console.log("Done!!!");
+	});
 });

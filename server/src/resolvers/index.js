@@ -14,13 +14,13 @@ const resolvers = {
 		}
 	},
 	Author: {
-		books(author, args, { Book }) {
-			return Book.find({ author: author.name });
+		books(parent, args, { Book, Author }) {
+			return Book.find({ author: parent.name });
 		}
 	},
 	Book: {
-		author(book, args, { Author }) {
-			return Author.find({ name: book.author });
+		author(parent, args, { Author }) {
+			return Author.findOne({ name: parent.author });
 		}
 	}
 };

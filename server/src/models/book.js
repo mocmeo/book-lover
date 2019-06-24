@@ -13,8 +13,7 @@ const bookSchema = new Schema({
 	},
 	genres: [
 		{
-			type: String,
-			unique: true
+			type: String
 		}
 	],
 	imageUrl: String,
