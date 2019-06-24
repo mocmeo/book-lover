@@ -1,4 +1,5 @@
 const { ApolloServer } = require("apollo-server");
+const config = require("../config");
 const mongoose = require("mongoose");
 const path = require("path");
 const fs = require("fs");
@@ -14,7 +15,7 @@ const Author = require("./models/author");
 
 // connect to mlab database
 mongoose
-	.connect("mongodb://mocmeo:test123@ds241647.mlab.com:41647/meowtain-book", {
+	.connect(config.MONGO_URL, {
 		useNewUrlParser: true,
 		useCreateIndex: true
 	})

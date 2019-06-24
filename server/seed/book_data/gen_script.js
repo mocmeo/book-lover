@@ -65,7 +65,7 @@ const getBookChapters = async (book, page) => {
 
 const writeToFile = book => {
 	fs.writeFile(
-		`./book_data/${book.title}.json`,
+		`./${book.title}.json`,
 		JSON.stringify(book, null, 2), // optional params to format it nicely
 		err =>
 			err
