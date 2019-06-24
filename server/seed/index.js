@@ -1,6 +1,6 @@
 const { Book, Author } = require("../src/models");
-const authors = require("./authors.json");
-const books = require("./books.json");
+const authors = require("./data/authors.json");
+const books = require("./data/books.json");
 const config = require("../config");
 const mongoose = require("mongoose");
 const Promise = require("bluebird");

@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-let booksPath = __dirname;
+let booksPath = path.join(__dirname, "crawled_books");
 
 let books = [];
 fs.readdirSync(booksPath).forEach(file => {
@@ -11,7 +11,7 @@ fs.readdirSync(booksPath).forEach(file => {
 	}
 });
 
-let resultPath = path.join(__dirname, "../", "books.json");
+let resultPath = path.join(__dirname, "data", "books.json");
 fs.writeFile(
 	resultPath,
 	JSON.stringify(books, null, 2), // optional params to format it nicely
