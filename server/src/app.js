@@ -26,7 +26,13 @@ mongoose
 const server = new ApolloServer({
 	cors: true, // enable cross-origin request
 	typeDefs,
-	resolvers
+	resolvers,
+	context: async ({ req }) => {
+		return {
+			Book,
+			Author
+		};
+	}
 });
 
 server.listen().then(({ url }) => {

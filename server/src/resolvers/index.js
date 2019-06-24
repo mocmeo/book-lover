@@ -1,29 +1,26 @@
-const { find, filter } = require("lodash");
-const { books, authors } = require("../../fakedb");
-
 const resolvers = {
 	Query: {
-		books(_, args, context) {
-			return books;
+		books(_, args, { Book }) {
+			return Book.find({});
 		},
-		book(_, args, context) {
-			return find(books, { id: args.id });
+		book(_, args, { Book }) {
+			return Book.findById(args.id);
 		},
-		authors(_, args, context) {
-			return authors;
+		authors(_, args, { Author }) {
+			return Author.find({});
 		},
-		author(_, args, context) {
-			return find(authors, { id: args.id });
+		author(_, args, { Author }) {
+			return Author.findById(args.id);
 		}
 	},
 	Author: {
-		books(author) {
-			return filter(books, { author: author.name });
+		books(author, args, { Book }) {
+			return Book.find({ author: author.name });
 		}
 	},
 	Book: {
-		author(book) {
-			return find(authors, { name: book.author });
+		author(book, args, { Author }) {
+			return Author.find({ name: book.author });
 		}
 	}
 };
