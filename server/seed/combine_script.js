@@ -4,11 +4,9 @@ let booksPath = path.join(__dirname, "crawled_books");
 
 let books = [];
 fs.readdirSync(booksPath).forEach(file => {
-	if (file !== "gen_script.js" && file !== "combine_script.js") {
-		let rawData = fs.readFileSync(path.join(booksPath, file), "utf-8");
-		let book = JSON.parse(rawData);
-		books.push(book);
-	}
+	let rawData = fs.readFileSync(path.join(booksPath, file), "utf-8");
+	let book = JSON.parse(rawData);
+	books.push(book);
 });
 
 let resultPath = path.join(__dirname, "data", "books.json");
