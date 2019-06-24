@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-let booksPath = path.join(__dirname, "crawled_books");
+let booksPath = path.join(__dirname, "data", "crawled_books");
 
 let books = [];
 fs.readdirSync(booksPath).forEach(file => {
