@@ -2,15 +2,18 @@
 	"dependencies": {
 		"apollo-server": "^2.6.4",
 		"apollo-server-express": "^2.6.4",
+		"bluebird": "^3.5.5",
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
 		"express-graphql": "^0.8.0",
 		"graphql": "^14.3.1",
 		"lodash": "^4.17.11",
-		"mongoose": "^5.6.0"
+		"mongoose": "^5.6.0",
+		"puppeteer": "^1.18.0"
 	},
 	"scripts": {
-		"start": "nodemon app.js"
+		"start": "nodemon src/app.js",
+		"seed": "node seed/index.js"
 	},
 	"name": "server",
 	"version": "1.0.0",

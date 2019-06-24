@@ -6,7 +6,7 @@ var books = [
 		genres: ["Fantasy", "Sci-fi"],
 		imageUrl: "http://image.url",
 		id: "1",
-		authorId: "1",
+		author: "Patrick Rothfuss",
 		data: [
 			{
 				text: "Chapter 1",
@@ -24,7 +24,7 @@ var books = [
 		genres: ["Drama"],
 		imageUrl: "http://image.url",
 		id: "2",
-		authorId: "2",
+		author: "Brandon Sanderson",
 		data: [
 			{
 				text: "Chapter 1",
@@ -42,7 +42,7 @@ var books = [
 		genres: ["Teens"],
 		imageUrl: "http://image.url",
 		id: "3",
-		authorId: "3",
+		author: "Terry Pratchett",
 		data: [
 			{
 				text: "Chapter 1",
@@ -57,9 +57,10 @@ var books = [
 ];
 
 var authors = [
-	{ name: "Patrick Rothfuss", age: 44, id: "1" },
-	{ name: "Brandon Sanderson", age: 42, id: "2" },
-	{ name: "Terry Pratchett", age: 66, id: "3" }
+	{ name: "Patrick Rothfuss", age: 44 },
+	{ name: "Brandon Sanderson", age: 42 },
+	{ name: "Terry Pratchett", age: 66 },
+	{ name: "Suzanne Collins", age: 60 }
 ];
 
 module.exports = {
