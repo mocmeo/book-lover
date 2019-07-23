@@ -1,7 +1,7 @@
 <template>
   <header id="header">
     <a href="index.html" class="logo">
-      <strong>Editorial</strong> by HTML5 UP
+      <strong>Book Lover</strong> by @Lam Ngo
     </a>
     <ul class="icons">
       <li>

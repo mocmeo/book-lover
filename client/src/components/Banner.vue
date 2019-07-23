@@ -3,9 +3,9 @@
     <div class="content">
       <header>
         <h1>Book Lover</h1>
-        <p>For those who love books</p>
+        <p>Meet your next favorite books!</p>
       </header>
-      <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
+      <p>Find and read more books you'll love, and keep track of the books you want to read. Be part of the world's largest community of book lovers.</p>
       <ul class="actions">
         <li>
           <a href="#" class="button big">Learn More</a>
