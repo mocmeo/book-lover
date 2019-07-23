@@ -1,20 +1,41 @@
 import Vue from "vue";
 import App from "./App.vue";
-import Antd from "ant-design-vue";
 import router from "./router";
 import store from "./store";
-import "ant-design-vue/dist/antd.css";
-import BootstrapVue from "bootstrap-vue";
+import ApolloClient from "apollo-boost";
+import { InMemoryCache } from "apollo-cache-inmemory";
 
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
-import "font-awesome/css/font-awesome.min.css";
+import VueApollo, { ApolloProvider } from "vue-apollo";
 
-Vue.use(BootstrapVue);
 Vue.config.productionTip = false;
+Vue.use(VueApollo);
+
+export const defaultClient = new ApolloClient({
+	url: "http://localhost:4000/graphql",
+	cache: new InMemoryCache(),
+	connectToDevTools: true,
+	onError: ({ graphQLErrors, networkError }) => {
+		if (networkError) {
+			console.log("networkError", networkError);
+		}
+		if (graphQLErrors) {
+			for (let err in graphQLErrors) {
+				if (err.name === "AuthenticationError") {
+					// set auth error in state (to show in snackbar)
+					// store.commit("setAuthError", err);
+					// signout user (to clear token)
+					// store.dispatch("signoutUser");
+				}
+			}
+		}
+	}
+});
+
+const apolloProvider = new VueApollo({ defaultClient });
 
 new Vue({
 	router,
 	store,
+	apolloProvider,
 	render: h => h(App)
 }).$mount("#app");
