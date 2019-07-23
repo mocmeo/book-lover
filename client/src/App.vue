@@ -22,11 +22,11 @@
 </template>
 
 <script>
-import PageHeader from "@/components/Header.vue";
-import Banner from "@/components/Banner.vue";
-import AppFeature from "@/components/Feature.vue";
-import BookCollection from "@/components/BookCollection.vue";
-import Sidebar from "@/components/Sidebar";
+import PageHeader from "@/layout/Header.vue";
+import Banner from "@/layout/Banner.vue";
+import AppFeature from "@/layout/Feature.vue";
+import BookCollection from "@/components/Books/BookCollection";
+import Sidebar from "@/layout/Sidebar";
 export default {
   name: "App",
   components: {
