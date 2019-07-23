@@ -73,9 +73,6 @@
 	var $sidebar = $("#sidebar"),
 		$sidebar_inner = $sidebar.children(".inner");
 
-	let side = document.querySelector("#sidebar");
-	console.log(side);
-
 	// Inactive by default on <= large.
 	breakpoints.on("<=large", function() {
 		$sidebar.addClass("inactive");

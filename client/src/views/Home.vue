@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import PageHeader from "@/layout/Header.vue";
-import Banner from "@/layout/Banner.vue";
-import AppFeature from "@/layout/Feature.vue";
+import PageHeader from "@/layout/HomePage/Header.vue";
+import Banner from "@/layout/HomePage/Banner.vue";
+import AppFeature from "@/layout/HomePage/Feature.vue";
 import BookCollection from "@/components/Books/BookCollection";
 import Sidebar from "@/layout/Sidebar";
 

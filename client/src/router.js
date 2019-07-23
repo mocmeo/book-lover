@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import DashboardLayout from "./layout/Admin/DashboardLayout.vue";
 
 Vue.use(Router);
 
@@ -19,6 +20,11 @@ export default new Router({
 			name: "about",
 			component: () =>
 				import(/* webpackChunkName: "about" */ "./views/About.vue")
+		},
+		{
+			path: "/admin",
+			name: "admin",
+			component: DashboardLayout
 		}
 	]
 });
