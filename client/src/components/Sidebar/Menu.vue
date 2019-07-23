@@ -9,19 +9,19 @@
         <a href="index.html">Homepage</a>
       </li>
       <li>
-        <a href="generic.html">Generic</a>
+        <a href="generic.html">Novels</a>
       </li>
       <li>
-        <a href="elements.html">Elements</a>
+        <a href="elements.html">Comics</a>
       </li>
       <li>
-        <span class="opener">Submenu</span>
+        <span class="opener">Genres</span>
         <ul>
           <li>
-            <a href="#">Lorem Dolor</a>
+            <a href="#">Slice of life</a>
           </li>
           <li>
-            <a href="#">Ipsum Adipiscing</a>
+            <a href="#">Horror</a>
           </li>
           <li>
             <a href="#">Tempus Magna</a>

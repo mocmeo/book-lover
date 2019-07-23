@@ -6,8 +6,8 @@
     <!-- Menu -->
     <book-menu />
 
-    <!-- Top Books -->
-    <top-books />
+    <!-- Mobile Apps -->
+    <mobile-app />
 
     <!-- Contact  -->
     <contact />
@@ -27,14 +27,14 @@
 import BookMenu from "./Menu";
 import Search from "./Search";
 import Contact from "./Contact";
-import TopBooks from "./TopBooks";
+import MobileApp from "./MobileApp";
 export default {
   name: "Sidebar",
   components: {
     BookMenu,
     Search,
     Contact,
-    TopBooks
+    MobileApp
   }
 };
 </script>

@@ -1,19 +1,19 @@
 <template>
   <section>
     <header class="major">
-      <h2>Top books</h2>
+      <h2>Mobile apps</h2>
     </header>
     <div class="mini-posts">
       <article>
         <a href="#" class="image">
           <img src="@/assets/images/pic07.jpg" alt />
         </a>
-        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+        <p>Get the Android app on Google Play Store and join the community of book lovers!</p>
       </article>
     </div>
     <ul class="actions">
       <li>
-        <a href="#" class="button">More</a>
+        <a href="#" class="button">Download</a>
       </li>
     </ul>
   </section>
