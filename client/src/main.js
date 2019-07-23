@@ -2,18 +2,19 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import ApolloClient from "apollo-boost";
+import ApolloClient from "apollo-client";
+import { HttpLink } from "apollo-link-http";
 import { InMemoryCache } from "apollo-cache-inmemory";
 
-import VueApollo, { ApolloProvider } from "vue-apollo";
+import VueApollo from "vue-apollo";
 
 Vue.config.productionTip = false;
 Vue.use(VueApollo);
 
 export const defaultClient = new ApolloClient({
-	url: "http://localhost:4000/graphql",
+	// url: "http://localhost:4000/graphql",
+	link: new HttpLink({ uri: "http://localhost:4000/graphql" }),
 	cache: new InMemoryCache(),
-	connectToDevTools: true,
 	onError: ({ graphQLErrors, networkError }) => {
 		if (networkError) {
 			console.log("networkError", networkError);

@@ -35,6 +35,9 @@ export default {
     AppFeature,
     BookCollection,
     Sidebar
+  },
+  beforeCreate() {
+    this.$store.dispatch("fetchBookList");
   }
 };
 </script>

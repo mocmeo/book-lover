@@ -1,10 +1,14 @@
 <template>
   <article>
     <a href="#" class="image">
-      <img src="@/assets/images/pic01.jpg" alt />
+      <img class="cover" :src="book.imageUrl" />
     </a>
-    <h3>{{ title }}</h3>
-    <p>{{ description }}</p>
+    <h3>{{ book.title }}</h3>
+    <p>
+      {{ book.description.length > 200
+      ? `${book.description.substr(0,200)}...`
+      : book.description }}
+    </p>
     <ul class="actions">
       <li>
         <a href="#" class="button">More</a>
@@ -16,16 +20,15 @@
 <script>
 export default {
   name: "BookItem",
-  components: {},
-  data() {
-    return {
-      title: "The Hunger Games",
-      description:
-        "The Hunger Games is a 2012 American dystopian science fiction-adventure film directed by Gary Ross and based on Suzanne Collins's 2008 novel of the same"
-    };
-  }
+  props: ["book"],
+  data() {}
 };
 </script>
 
 <style>
+.cover {
+  object-fit: cover;
+  width: auto;
+  height: 500px;
+}
 </style>
