@@ -1,3 +1,5 @@
+import VTooltip from "v-tooltip";
+import Notifications from "@/components/NotificationPlugin";
 import GlobalComponents from "./globalComponents";
 import GlobalDirectives from "./globalDirectives";
 
@@ -14,5 +16,7 @@ export default {
 		Vue.use(GlobalComponents);
 		Vue.use(GlobalDirectives);
 		Vue.use(SideBar);
+		Vue.use(VTooltip);
+		Vue.use(Notifications);
 	}
 };
