@@ -10,18 +10,6 @@
         </a>
         <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
       </article>
-      <article>
-        <a href="#" class="image">
-          <img src="@/assets/images/pic08.jpg" alt />
-        </a>
-        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-      </article>
-      <article>
-        <a href="#" class="image">
-          <img src="@/assets/images/pic09.jpg" alt />
-        </a>
-        <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-      </article>
     </div>
     <ul class="actions">
       <li>

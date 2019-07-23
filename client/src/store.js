@@ -23,20 +23,6 @@ export default new Vuex.Store({
 	actions: {
 		async fetchBookList({ commit }) {
 			const res = await apolloClient.query({
-				// query: gql`
-				// 	query {
-				// 		books {
-				// 			id
-				// 			title
-				// 			description
-				// 			genres
-				// 			imageUrl
-				// 			author {
-				// 				name
-				// 			}
-				// 		}
-				// 	}
-				// `
 				query: GET_BOOK_LIST
 			});
 			commit("setBookList", res.data.books);
