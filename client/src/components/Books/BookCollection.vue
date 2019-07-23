@@ -17,11 +17,11 @@ export default {
   components: {
     BookItem
   },
-  data() {
-    return {};
-  },
   computed: {
     ...mapGetters(["books"])
+  },
+  beforeCreate() {
+    this.$store.dispatch("fetchBookList");
   }
 };
 </script>

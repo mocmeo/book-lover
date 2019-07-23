@@ -20,8 +20,7 @@
 <script>
 export default {
   name: "BookItem",
-  props: ["book"],
-  data() {}
+  props: ["book"]
 };
 </script>
 

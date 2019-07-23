@@ -1,9 +1,11 @@
 <template>
-  <div></div>
+  <div>
+    <h1>This is a about page!</h1>
+  </div>
 </template>
 <script>
 export default {
-  data() {}
+  name: "About"
 };
 </script>
 
