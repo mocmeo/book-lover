@@ -1,0 +1,17 @@
+{
+	"name": "book-lover",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "git@github.com:mocmeo/book-lover.git",
+	"author": "mocmeo <vdev.lamnn@gmail.com>",
+	"scripts": {
+		"dev": "yarn run server | yarn run vue",
+		"server": "pm2 start server/src/app.js --watch --name server",
+		"vue": "cross-env NODE_ENV=development yarn --cwd client start --name vue -- --open --hot",
+		"seed": "node seed/index.js"
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"cross-env": "^5.2.0"
+	}
+}
